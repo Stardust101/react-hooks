@@ -94,16 +94,16 @@ function Example() {
 
 #### 关于组件更新
 
-0.  组价更新
+0.  组件更新
     1. 在 class 中，我们希望在组件加载和更新时执行同样的操作，所以我们一般需要在componentDidMount的时候更新数据，有时候还需要在componentDidUpate的时候更新数据，同样的更新数据逻辑我们需要写两遍。
     1. 在hooks中，我们使用useEffect进行更新数据，只需要写一次，默认情况下，它在第一次渲染之后和每次更新之后都会执行.
 
 0.  性能优化
-    1. 如果频繁的调用生命周期函数可能会出现性能问题，在 class 中，我们可以通过shouldComponentDidUpdate来决定是否更新组件，也可以在 componentDidUpdate 中添加对 prevProps 或 prevState 的比较逻辑解决.
+    1. 如果频繁的调用生命周期函数可能会出现性能问题，在 class 中，我们可以通过shouldComponentUpdate来决定是否更新组件，也可以在 componentDidUpdate 中添加对 prevProps 或 prevState 的比较逻辑解决.
     1. 在hooks中，如果某些特定值在两次重渲染之间没有发生变化，我们可以通知React跳过对useEffect的调用，只要传递数组作为useEffect的第二个可选参数即可，比如上述的例子组件仅在count更改时才会进行重新渲染.
 
 
-#### 未完待续
+#### 未完待续……
 
 
 
